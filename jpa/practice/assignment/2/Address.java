@@ -1,6 +1,8 @@
 package assignment2;
 
-public class Address {
+import java.io.Serializable;
+
+public class Address implements Serializable {
 	private String customerAddress;
 	public Address() {}
 	public Address(String customerAddress) {

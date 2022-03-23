@@ -16,20 +16,20 @@ public class Library {
 		address.setCustomerAddress("dehradun");
 		
 		
-		Customer c = new Customer();
-	    c.setCustomerName("Manish");
-	    c.setCustomerEmail("qwerty@gmail.com");
-	    c.setCustomerAddress(address);
+		Customer cust = new Customer();
+	    cust.setCustomerName("Manish");
+	    cust.setCustomerEmail("qwerty@gmail.com");
+	    cust.setCustomerAddress(address);
 		
 		entitymanager.getTransaction().begin();
-		entitymanager.persist(c);
+		entitymanager.persist(cust);
 		entitymanager.flush();
 		entitymanager.getTransaction().commit();
 		
-		Customer mycustomer = entitymanager.find(Customer.class, "Manish");
-		System.out.println(mycustomer.getCustomerName());
-		System.out.println(mycustomer.getCustomerEmail());
-		System.out.println(mycustomer.getCustomerAddress());
+		Customer mycust = entitymanager.find(Customer.class, "Manish");
+		System.out.println(mycust.getCustomerName());
+		System.out.println(mycust.getCustomerEmail());
+		System.out.println(mycust.getCustomerAddress());
 		
 		
 		
