@@ -1,28 +1,30 @@
-package ProjectAssignment1;
-import java.util.Date;
+package assignment1;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-
 @Entity
 public class Ticket {
+
+	@Id
 	private String source;
 	private String destination;
-	private int price;
-	@Id
-	private Date date;
-	public String getSource() {
-		return source;
+	private float price;
+	private String date;
+	public Ticket() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
-	public Ticket() {}
-	public Ticket(String source, String destination, int price, Date date) {
+	public Ticket(String source, String destination, float price, String date) {
+		super();
 		this.source = source;
 		this.destination = destination;
 		this.price = price;
 		this.date = date;
 	}
-	
+	public String getSource() {
+		return source;
+	}
 	public void setSource(String source) {
 		this.source = source;
 	}
@@ -32,16 +34,16 @@ public class Ticket {
 	public void setDestination(String destination) {
 		this.destination = destination;
 	}
-	public int getPrice() {
+	public float getPrice() {
 		return price;
 	}
-	public void setPrice(int price) {
+	public void setPrice(float price) {
 		this.price = price;
 	}
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
-	public void setDate(Date date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 	@Override
@@ -50,5 +52,4 @@ public class Ticket {
 				+ "]";
 	}
 	
-
 }

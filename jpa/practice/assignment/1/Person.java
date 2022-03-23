@@ -1,6 +1,11 @@
-package ProjectAssignment1;
+package assignment1;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Person {
+	@Id
 	private String personName;
 	private String personEmail;
 	private long personPhone;
@@ -28,7 +33,10 @@ public class Person {
 	public void setPersonPhone(long personPhone) {
 		this.personPhone = personPhone;
 	}
+	@Override
+	public String toString() {
+		return "Person [personName=" + personName + ", personEmail=" + personEmail + ", personPhone=" + personPhone
+				+ "]";
+	}
 	
-	
-
 }

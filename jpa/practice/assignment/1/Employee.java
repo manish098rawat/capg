@@ -1,6 +1,11 @@
-package ProjectAssignment1;
+package assignment1;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Employee {
+	@Id
 	private String employeeName;
 	private String employeeDepartment;
 	private String employeeDesignation;
